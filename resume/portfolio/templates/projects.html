@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page-header text-center">
+  <p class="eyebrow">Портфоліо</p>
+  <h2 class="page-title">Два проєкти в Сільпо</h2>
+  <p class="page-subtitle">Два цифрові рішення для Сільпо: внутрішня система керування задачами та портал новин і подій магазину.</p>
+</section>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <article class="project-card">
+      <div class="project-thumb project-one">
+        <img class="project-preview" src="{% static 'images/silpo-task-dashboard.png' %}" alt="Панель задач внутрішньої системи СмакоПлан">
+        <div class="project-meta">
+          <span class="project-label">SILPO</span>
+          <span class="project-type">Система задач</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <h3>СмакоПлан — керування задачами</h3>
+        <p>Внутрішня система для перегляду задач, їхніх пріоритетів, дедлайнів і прогресу команди.</p>
+        <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#taskDashboardModal">Переглянути проєкт</button>
+      </div>
+    </article>
+  </div>
+
+  <div class="col">
+    <article class="project-card">
+      <div class="project-thumb project-two">
+        <img class="project-preview" src="{% static 'images/silpo-news-portal.png' %}" alt="Головна сторінка порталу новин і подій Сільпо">
+        <div class="project-meta">
+          <span class="project-label">SILPO</span>
+          <span class="project-type">Портал магазину</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <h3>Портал новин та подій Сільпо</h3>
+        <p>Сторінка магазину з новинами, подіями та матеріалами для покупців.</p>
+        <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#newsPortalModal">Переглянути проєкт</button>
+      </div>
+    </article>
+  </div>
+</div>
+
+<div class="modal fade" id="taskDashboardModal" tabindex="-1" aria-labelledby="taskDashboardModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="taskDashboardModalLabel">СмакоПлан — система керування задачами</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+      </div>
+      <div class="modal-body">
+        <img class="img-fluid rounded project-detail-image" src="{% static 'images/silpo-task-dashboard.png' %}" alt="Скриншот панелі задач СмакоПлан">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="newsPortalModal" tabindex="-1" aria-labelledby="newsPortalModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="newsPortalModalLabel">Портал новин та подій Сільпо</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+      </div>
+      <div class="modal-body">
+        <img class="img-fluid rounded project-detail-image" src="{% static 'images/silpo-news-portal.png' %}" alt="Скриншот порталу новин і подій Сільпо">
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
